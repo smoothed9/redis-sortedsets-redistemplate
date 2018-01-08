@@ -1,0 +1,26 @@
+buildscript {
+    ext {
+        springBootVersion = "1.5.3.RELEASE"
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+    }
+}
+
+apply plugin: "org.springframework.boot"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile 'org.springframework.boot:spring-boot-starter-data-redis'
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
